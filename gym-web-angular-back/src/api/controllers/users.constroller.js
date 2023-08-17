@@ -68,6 +68,13 @@ const userProfile = async (req, res) => {
     }
   };
 
-  
+  const checkSession = (req, res) => {
+ 
+    try {
+        return res.status(201).json(req.user)
+    } catch (error) {
+        return res.status(500).json(error); 
+    }
+}
 
-module.exports={register,login,getUsers, userProfile }
+module.exports={register,login,getUsers, userProfile, checkSession }
