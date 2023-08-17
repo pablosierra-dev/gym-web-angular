@@ -11,6 +11,8 @@ import { PrivateComponent } from './pages/private/private.component';
 import { NavbarComponent } from './shared/component/navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
+import { CoachListComponent } from './page/coaches-list/coaches-list.component';
+import { CoachesDetailsComponent } from './page/coaches/coaches.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,11 @@ import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
     HomeComponent,
     RegisterComponent,
     PrivateComponent,
-    NavbarComponent
+    NavbarComponent,
+    CoachListComponent,
+    CoachesDetailsComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

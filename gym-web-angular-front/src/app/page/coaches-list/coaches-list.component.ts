@@ -7,7 +7,7 @@ import { CoachI } from "src/app/models/coaches";
   templateUrl: "./coaches-list.component.html",
   styleUrls: ["./coaches-list.component.css"]
 })
-export class CoachesListComponent implements OnInit {
+export class CoachListComponent implements OnInit {
   coaches: CoachI[] = [];
 
   constructor(private coachesServ: CoachesServices) {}
