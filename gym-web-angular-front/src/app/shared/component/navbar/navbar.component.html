@@ -1,0 +1,7 @@
+<nav>
+    <a routerLink="/">Home</a>
+    <a *ngIf="!api.getToken()" routerLink="/login">Login</a>
+    <a *ngIf="!api.getToken()" routerLink="/register">Register</a>
+    <a *ngIf="api.getToken()" routerLink="/private">Private</a>
+    <button *ngIf="api.getToken()" (click)="logout()">LogOut</button>
+</nav>
