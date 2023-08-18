@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
+import { FooterComponent } from './shared/component/footer/footer.component';
 // register Swiper custom elements
 register();
 
@@ -23,7 +24,8 @@ register();
     HomeComponent,
     RegisterComponent,
     PrivateComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
