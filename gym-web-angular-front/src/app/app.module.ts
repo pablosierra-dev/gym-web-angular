@@ -30,10 +30,8 @@ register();
     RegisterComponent,
     PrivateComponent,
     NavbarComponent,
-
     CoachListComponent,
     CoachesDetailsComponent,
-
     FooterComponent
 
   ],

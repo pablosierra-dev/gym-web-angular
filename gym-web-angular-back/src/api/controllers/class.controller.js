@@ -16,7 +16,6 @@ const getOneClass = async (req, res) => {
         const { id } = req.params
         const oneClass = await Class.findById(id)
         return res.status(200).json(oneClass)
-
     } catch (error) {
         return res.status(500).json(error)
     }
@@ -35,14 +34,40 @@ const getOneClassByName = async (req, res) => {
 
 const getOneClassByType = async (req, res) => {
     try {
-        const {Type} = req.params
-        const oneClassByType = await Class.find({genere:req.params.Type});
+        const {type} = req.params
+        const oneClassByType = await Class.find({genere:type});
         return res.status(200).json(oneClassByType)
 
     } catch (error) {
         return res.status(500).json(error)
     }
 }
+
+const postClass = async (req, res) => {
+    try {
+        const newClass = new Class(req.body)
+        const createdClass = await newClass.save()
+        return res.status(201).json(createdClass)
+    } catch (error) {
+        return res.status(500).json(error)
+    }
+}
+
+const putClass = async (req, res) => {
+    try {
+        const { id } = req.params
+        const putCoachs = new Class(req.body)
+        putCoachs._id = id;
+        const updateClass = await Class.findByIdAndUpdate(id, putClass, { new: true })
+        if (!updateClass) {
+            return res.status(404).json({ message: "no existe un coach con este id" })
+        }
+        return res.status(200).json(updateClass)
+    } catch (error) {
+        return res.status(500).json(error)
+    }
+}
+
 
 const deleteClass= async (req, res) => {
     try {
@@ -57,4 +82,4 @@ const deleteClass= async (req, res) => {
     }
 }
 
-module.exports = {getClass, getOneClass, getOneClassByName, getOneClassByType,deleteClass}
+module.exports = {getClass, getOneClass, getOneClassByName, getOneClassByType,postClass,putClass,deleteClass}
