@@ -8,7 +8,7 @@ const usersArray = [
         age: 50,
         email: "Jose@diseñador.com",
         password: "Jose123",
-        courses: ["64df5573078448c9f181673d","64df5573078448c9f181673f"],
+        courses: ["64df8cadb94ecb4dc11c4ba7","64df8cadb94ecb4dc11c4ba6"],
         role: "coach"
     },
     {
@@ -16,14 +16,14 @@ const usersArray = [
         age: 30,
         email: "Abel@huelva.com",
         password: "Abelino123",
-        courses: ["64df5573078448c9f181673e","64df5573078448c9f181673f"],
+        courses: ["64df8cadb94ecb4dc11c4ba6","64df8cadb94ecb4dc11c4ba7"],
         role: "user",
     },{
         name: "Dayana",
         age: 29,
         email: "Dayana@teacher.com",
         password: "Dayana123",
-        courses: ["64df5573078448c9f181673e","64df5573078448c9f181673d"],
+        courses: ["64df8cadb94ecb4dc11c4ba7","64df8cadb94ecb4dc11c4ba5"],
         role: "coach"
     },
   ];
