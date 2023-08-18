@@ -7,6 +7,8 @@ import { PrivateComponent } from './pages/private/private.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { authGuard2 } from './shared/guards/auth2.guard';
 import { CoachListComponent } from './page/coaches-list/coaches-list.component';
+import { CoursesComponent } from './pages/courses/courses.component';
+import { CoursesDetailComponent } from './pages/courses-detail/courses-detail.component';
 
 const routes: Routes = [
   {
@@ -19,7 +21,11 @@ const routes: Routes = [
     path: 'private', component: PrivateComponent, canActivate: [authGuard2]
   },{
     path: 'coaches', component: CoachListComponent
-  },
+  },{
+    path: 'class', component: CoursesComponent
+  },{
+    path: 'class/:id', component: CoursesDetailComponent
+  }
 ];
 
 @NgModule({
