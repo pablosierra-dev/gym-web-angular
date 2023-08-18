@@ -32,7 +32,7 @@ register();
     NavbarComponent,
 
     CoachListComponent,
-    CoachesDetailsComponent
+    CoachesDetailsComponent,
 
     FooterComponent
 

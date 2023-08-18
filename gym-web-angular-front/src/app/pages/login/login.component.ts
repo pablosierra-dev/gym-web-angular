@@ -33,10 +33,3 @@ export class LoginComponent implements OnInit{
   }
 }
 
-import {
-  Input,
-  Ripple,
-  initTE,
-} from "tw-elements";
-
-initTE({ Input, Ripple });
