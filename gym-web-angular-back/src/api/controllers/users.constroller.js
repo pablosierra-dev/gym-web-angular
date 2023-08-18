@@ -125,4 +125,4 @@ const checkSession = (req, res) => {
     }
 }
 
-module.exports={register,login,getUsers,getOneUser,postUser,putUser, userProfile,deleteUser, checkSession }
+module.exports={register, login,getUsers,getOneUser,postUser,putUser, userProfile,deleteUser, checkSession }

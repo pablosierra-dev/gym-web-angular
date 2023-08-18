@@ -1,5 +1,6 @@
 const express = require('express');
 const coachsRouter = express.Router();
+const {isAuth, isCoach} = require("../../middlewares/auth")
 
 const {getCoachs,getOneCoach, postCoach, putCoach, deleteCoach} = require("../controllers/coachs.constroller")
 
