@@ -1,15 +1,16 @@
-
 const express = require('express');
 const classRouter = express.Router();
 
+const {isAuth, isCoach} = require("../../middlewares/auth")
+
 const {getClass, getOneClass, getOneClassByName, getOneClassByType,putClass,postClass ,deleteClass} = require("../controllers/class.controller")
 
-classRouter.get("/", getClass);
-classRouter.get("/:id", getOneClass)
-classRouter.get("/findByName/:name", getOneClassByName)
-classRouter.get("/findByType/:Type", getOneClassByType)
-classRouter.put("/modifyClass/:id", putClass)
-classRouter.post("/newClass/", postClass)
-classRouter.delete("/deleted/:id", deleteClass)
+classRouter.get("/",[isAuth], getClass);
+classRouter.get("/:id",[isAuth], getOneClass)
+classRouter.get("/findByName/:name",[isAuth], getOneClassByName)
+classRouter.get("/findByType/:Type",[isAuth], getOneClassByType)
+classRouter.put("/modifyClass/:id",[isCoach], putClass)
+classRouter.post("/newClass/",[isCoach], postClass)
+classRouter.delete("/deleted/:id",[isCoach], deleteClass)
 
 module.exports = classRouter;
