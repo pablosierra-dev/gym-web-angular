@@ -4,7 +4,6 @@ import { CoachI } from "src/app/models/coaches";
 @Component({
   selector: "app-coaches-details",
   templateUrl: "./coaches.component.html",
-  styleUrls: ["./coaches.component.css"]
 })
 export class CoachesDetailsComponent implements OnInit {
   @Input()

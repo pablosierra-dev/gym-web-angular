@@ -6,6 +6,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { PrivateComponent } from './pages/private/private.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { authGuard2 } from './shared/guards/auth2.guard';
+import { CoachListComponent } from './page/coaches-list/coaches-list.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,8 @@ const routes: Routes = [
     path: 'register', component: RegisterComponent
   },{
     path: 'private', component: PrivateComponent, canActivate: [authGuard2]
+  },{
+    path: 'coaches', component: CoachListComponent
   }
 ];
 

@@ -5,11 +5,11 @@ import { CoachI } from "src/app/models/coaches";
 @Component({
   selector: "app-coaches-list",
   templateUrl: "./coaches-list.component.html",
-  styleUrls: ["./coaches-list.component.css"]
 })
 export class CoachListComponent implements OnInit {
   coaches: CoachI[] = [];
-
+ 
+  console = console
   constructor(private coachesServ: CoachesServices) {}
 
   public loadCoaches() {
