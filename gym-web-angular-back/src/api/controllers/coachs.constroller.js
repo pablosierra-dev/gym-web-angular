@@ -10,6 +10,17 @@ const getCoachs = async (req, res) => {
     }
   };
 
+  const getOneCoach = async (req, res) => {
+    try {
+        const { id } = req.params
+        const oneCoach = await Coachs.findById(id)
+        return res.status(200).json(oneCoach)
+
+    } catch (error) {
+        return res.status(500).json(error)
+    }
+};
+
   
   const postCoach = async (req, res) => {
       try {
@@ -49,4 +60,4 @@ const getCoachs = async (req, res) => {
       }
   }
   
-  module.exports = { getCoachs, postCoach, putCoach, deleteCoach }
+  module.exports = { getCoachs,getOneCoach, postCoach, putCoach, deleteCoach }

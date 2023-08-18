@@ -107,7 +107,7 @@ const userProfile = async (req, res) => {
 const deleteUser = async (req, res) => {
     try {
         const { id } = req.params
-        const deleteUser = await User.findByIdAndDelete(id)
+        const deleteUser = await Users.findByIdAndDelete(id)
         if (!deleteUser) {
             return res.status(404).json({ message: "este id no existe" })
         }
