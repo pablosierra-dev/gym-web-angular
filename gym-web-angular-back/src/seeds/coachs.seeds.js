@@ -8,7 +8,7 @@ const coachsArray = [
         age: 32,
         yearsOfExperiencie: 5,
         courses: ["64df5573078448c9f181673d","64df5573078448c9f181673f"],
-        img: "https://i.pinimg.com/originals/5e/62/eb/5e62eb5b39173c9ffca948c473792391.jpg"
+        img:"https://i.pinimg.com/originals/5e/62/eb/5e62eb5b39173c9ffca948c473792391.jpg"
     },
     {
         name: "Adriana",

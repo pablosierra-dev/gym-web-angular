@@ -9,7 +9,7 @@ const usersArray = [
         email: "Jose@diseñador.com",
         password: "Jose123",
         courses: ["64df5573078448c9f181673d","64df5573078448c9f181673f"],
-        role: "admin"
+        role: "coach"
     },
     {
         name: "Abel",

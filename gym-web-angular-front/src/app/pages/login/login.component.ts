@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit{
   login(){
     this.submited = true;
     if(this.loginForm.valid){
+      console.log(this.loginForm.value)
       this.api.login(this.loginForm.value).subscribe((data:any) => {
         console.log(data)
         localStorage.setItem('token', data.token)
