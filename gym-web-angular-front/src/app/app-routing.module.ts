@@ -7,6 +7,7 @@ import { PrivateComponent } from './pages/private/private.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { authGuard2 } from './shared/guards/auth2.guard';
 import { CoachListComponent } from './page/coaches-list/coaches-list.component';
+import { UsersComponent } from './pages/users/users.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,9 @@ const routes: Routes = [
     path: 'private', component: PrivateComponent, canActivate: [authGuard2]
   },{
     path: 'coaches', component: CoachListComponent
-  },
+  },{
+    path: 'users', component: UsersComponent
+  }
 ];
 
 @NgModule({

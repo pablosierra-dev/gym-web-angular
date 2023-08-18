@@ -18,6 +18,7 @@ import { CoachesDetailsComponent } from './page/coaches/coaches.component';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
 import { FooterComponent } from './shared/component/footer/footer.component';
+import { UsersComponent } from './pages/users/users.component';
 // register Swiper custom elements
 register();
 
@@ -32,7 +33,8 @@ register();
     NavbarComponent,
     CoachListComponent,
     CoachesDetailsComponent,
-    FooterComponent
+    FooterComponent,
+    UsersComponent
 
   ],
 

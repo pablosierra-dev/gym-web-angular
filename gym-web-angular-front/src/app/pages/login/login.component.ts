@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit{
   loginForm!:FormGroup;
   submited: boolean = false;
   constructor(private form: FormBuilder, private api: AuthService, private router: Router){}
+  
 
   ngOnInit(): void {
     this.loginForm = this.form.group({
@@ -31,4 +32,4 @@ export class LoginComponent implements OnInit{
       })
     }
   }
-
+}
