@@ -11,11 +11,16 @@ import { PrivateComponent } from './pages/private/private.component';
 import { NavbarComponent } from './shared/component/navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
+
+import { CoachListComponent } from './page/coaches-list/coaches-list.component';
+import { CoachesDetailsComponent } from './page/coaches/coaches.component';
+
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
 import { FooterComponent } from './shared/component/footer/footer.component';
 // register Swiper custom elements
 register();
+
 
 @NgModule({
   declarations: [
@@ -25,8 +30,14 @@ register();
     RegisterComponent,
     PrivateComponent,
     NavbarComponent,
+
+    CoachListComponent,
+    CoachesDetailsComponent
+
     FooterComponent
+
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
