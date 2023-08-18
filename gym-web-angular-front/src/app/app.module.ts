@@ -1,5 +1,5 @@
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,8 +11,16 @@ import { PrivateComponent } from './pages/private/private.component';
 import { NavbarComponent } from './shared/component/navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
+
 import { CoachListComponent } from './page/coaches-list/coaches-list.component';
 import { CoachesDetailsComponent } from './page/coaches/coaches.component';
+
+// import function to register Swiper custom elements
+import { register } from 'swiper/element/bundle';
+import { FooterComponent } from './shared/component/footer/footer.component';
+// register Swiper custom elements
+register();
+
 
 @NgModule({
   declarations: [
@@ -22,8 +30,12 @@ import { CoachesDetailsComponent } from './page/coaches/coaches.component';
     RegisterComponent,
     PrivateComponent,
     NavbarComponent,
+
     CoachListComponent,
     CoachesDetailsComponent
+
+    FooterComponent
+
   ],
 
   imports: [
@@ -38,6 +50,7 @@ import { CoachesDetailsComponent } from './page/coaches/coaches.component';
     useClass: AuthInterceptor,
     multi: true
   }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
