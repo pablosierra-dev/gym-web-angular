@@ -7,7 +7,7 @@ import { UserI } from 'src/app/models/interface';
   providedIn: 'root'
 })
 export class AuthService {
-  db_url: string = 'http://localhost:5002';
+  db_url: string = 'http://localhost:5000';
   constructor(private http: HttpClient) { }
 
   register(user: UserI){
