@@ -19,7 +19,7 @@ const routes: Routes = [
     path: 'private', component: PrivateComponent, canActivate: [authGuard2]
   },{
     path: 'coaches', component: CoachListComponent
-  }
+  },
 ];
 
 @NgModule({
