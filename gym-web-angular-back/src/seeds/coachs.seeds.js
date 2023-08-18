@@ -7,19 +7,22 @@ const coachsArray = [
         name: "Alvaro",
         age: 32,
         yearsOfExperiencie: 5,
-        courses: ["64c0f53c42bdfc4ee08a7948","64c0f53c42bdfc4ee08a7949"]
+        courses: ["64df5573078448c9f181673d","64df5573078448c9f181673f"],
+        img: "https://i.pinimg.com/originals/5e/62/eb/5e62eb5b39173c9ffca948c473792391.jpg"
     },
     {
         name: "Adriana",
         age: 22,
         yearsOfExperiencie: 9,
-        courses: ["64c0f53c42bdfc4ee08a7949","64c0f53c42bdfc4ee08a794a"]
+        courses: ["64df5573078448c9f181673d","64df5573078448c9f181673e"],
+        img:"https://i.pinimg.com/originals/73/4f/3f/734f3f480ca4f149d1bbf40abd80263d.jpg"
     },
     {
         name: "Antonio",
         age: 42,
         yearsOfExperiencie: 1,
-        courses: ["64c0f53c42bdfc4ee08a7948","64c0f53c42bdfc4ee08a794a"]
+        courses: ["64df5573078448c9f181673f","64df5573078448c9f181673e"],
+        img:"https://i.pinimg.com/originals/63/d8/be/63d8be25b6b6fa73eb96d702a8e15e9b.jpg"
 
     },
   ];
