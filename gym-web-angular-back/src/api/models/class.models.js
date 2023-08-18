@@ -7,6 +7,7 @@ const classSchema = new Schema({
     duration: { type: String, requires: true},
     class: { type: Number, requires: true},
     type: { type: String, requires: true},
+    img:{ type: String, requires: true}
 },{
     collection: "class"
 }
