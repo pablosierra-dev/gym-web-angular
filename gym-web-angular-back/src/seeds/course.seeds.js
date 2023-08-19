@@ -15,7 +15,7 @@ const courseArray = [
       duration: "45 min",
       class:  22,
       type: "power training",
-      img:"https://www.pinterest.it/pin/13792342600440994/"
+      img:"https://i.pinimg.com/564x/65/22/55/652255221dcccdb2e7476d7288775523.jpg"
     },
     {
       name: "natacion",

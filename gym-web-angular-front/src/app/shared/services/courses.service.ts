@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, throwError } from 'rxjs';
-import { CoachI } from 'src/app/models/coaches';
+import { ClassI } from 'src/app/models/class';
 
 @Injectable({
   providedIn: 'root'
@@ -21,17 +21,18 @@ export class CoursesService {
   oneCourse(id: number): any{
     return this.http.get(`${this.api_url}/class/${id}`)
   }
+  
 
   oneCourseByName(name:string): any{
     return this.http.get(`${this.api_url}/class/${name}`)
   }
 
-  newCourse(coach: CoachI): any{
-    return this.http.post(`${this.api_url}/class/`, coach)
+  newCourse(course: ClassI): any{
+    return this.http.post(`${this.api_url}/class/`, course)
   }
 
-  modifyCourse(coach: CoachI , id: number): any{
-    return this.http.put(`${this.api_url}/class/${id}`, coach)
+  modifyCourse(course: ClassI , id: number): any{
+    return this.http.put(`${this.api_url}/class/${id}`, course)
   }
 
   deleteCourse(id: number): any{
@@ -49,6 +50,10 @@ export class CoursesService {
   handleError(error: HttpErrorResponse){
     //localStorage.removeItem('class');
     return throwError(error.error.message)
+  }
+
+  getCourseDetail(courseId: string) {
+    return this.http.get<ClassI>(`${this.api_url}/class/${courseId}`);
   }
 }
 

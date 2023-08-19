@@ -18,6 +18,8 @@ import { CoachesDetailsComponent } from './page/coaches/coaches.component';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
 import { FooterComponent } from './shared/component/footer/footer.component';
+import { CoursesComponent } from './pages/courses/courses.component';
+import { CoursesDetailComponent } from './pages/courses-detail/courses-detail.component';
 // register Swiper custom elements
 register();
 
@@ -32,7 +34,9 @@ register();
     NavbarComponent,
     CoachListComponent,
     CoachesDetailsComponent,
-    FooterComponent
+    FooterComponent,
+    CoursesComponent,
+    CoursesDetailComponent
 
   ],
 

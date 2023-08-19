@@ -8,12 +8,15 @@ import { CoursesService } from 'src/app/shared/services/courses.service';
   styleUrls: ['./courses.component.scss']
 })
 export class CoursesComponent implements OnInit {
-  listado!: CourseI[];
+  courses: any[] = [];
 
-  constructor(private courseApi: CoursesService){}
+  constructor(private api: CoursesService){}
   ngOnInit(): void {
-    this.courseApi.getCourses().subscribe((data: any) => {
-      this.listado = [...data]
-    })
+    this.api.getCourses().subscribe((data: any) =>{
+      this.courses = [...data]
+      console.log(data);
+      
+    });
+    
   }
 }
