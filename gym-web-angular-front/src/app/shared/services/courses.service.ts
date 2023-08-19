@@ -47,7 +47,7 @@ export class CoursesService {
   }
 
   handleError(error: HttpErrorResponse){
-    localStorage.removeItem('class');
+    //localStorage.removeItem('class');
     return throwError(error.error.message)
   }
 }

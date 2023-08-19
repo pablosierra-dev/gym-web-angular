@@ -33,8 +33,8 @@ export class AuthService {
   }
 
   handleError(error: HttpErrorResponse){
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    //localStorage.removeItem('token');
+    //localStorage.removeItem('user');
     return throwError(error.error.message)
   }
 }
