@@ -1,3 +1,4 @@
+import { UserService } from './../../shared/services/users.service.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/shared/services/auth.service';
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit{
   loginForm!:FormGroup;
   submited: boolean = false;
-  constructor(private form: FormBuilder, private api: AuthService, private router: Router){}
+  constructor(private form: FormBuilder, private api: AuthService, private router: Router, private userService: UserService){}
 
   ngOnInit(): void {
     this.loginForm = this.form.group({
@@ -25,9 +26,11 @@ export class LoginComponent implements OnInit{
     if(this.loginForm.valid){
       console.log(this.loginForm.value)
       this.api.login(this.loginForm.value).subscribe((data:any) => {
-        console.log(data)
+        console.log(data);
+        
         localStorage.setItem('token', data.token)
         localStorage.setItem('user', JSON.stringify(data.user))
+        this.userService.setUserData(data.user)
         this.router.navigate(['/home']);
       })
     }

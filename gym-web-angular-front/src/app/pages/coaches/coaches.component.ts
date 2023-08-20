@@ -16,14 +16,14 @@ export class CoachesComponent implements OnInit {
       this.coachApi.allCoaches().subscribe((data: any) => {
         this.coaches = [...data]
         // console.log(data);
+
+
         
         
       });
 
-      this.coachApi.getCourses().subscribe((data: any) => {
-        this.courses = data;
-      });
       
+
     }
     
 
