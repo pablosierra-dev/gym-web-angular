@@ -8,7 +8,7 @@ import { AuthService } from './shared/services/auth.service';
 })
 export class AppComponent implements OnInit{
   title = '17.auth';
-  constructor(private api: AuthService){}
+  constructor(public api: AuthService){}
   ngOnInit(): void {
     this.api.checkSession().subscribe(data => {
       console.log(data)

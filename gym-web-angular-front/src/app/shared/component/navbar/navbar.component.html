@@ -1,37 +1,73 @@
-<nav>
-    <a routerLink="/">Home</a>
-    <a *ngIf="!api.getToken()" routerLink="/login">Login</a>
-    <a *ngIf="!api.getToken()" routerLink="/register">Register</a>
-    <a *ngIf="api.getToken()" routerLink="/private">Private</a>
-    <a *ngIf="!api.getToken()" routerLink="/coaches">coaches</a>
-    <button *ngIf="api.getToken()" (click)="logout()">LogOut</button>
-</nav>
-<!-- follow me on twitter @asad_codes
+<nav class="bg-blue-500">
+  <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
+    <a class="text-3xl font-bold leading-none" href="#" routerLink="/home">
+      UHGYM
+    </a>
+    <div class="lg:hidden">
+      <button class="navbar-burger flex items-center text-blue-600 p-3" (click)="toggleMenu()">
+        <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Mobile menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </button>
+    </div>
+    <ul
+      class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6 navbar-menu">
+      <a *ngIf="api.getToken()" routerLink="/home">Home</a>
+      <a *ngIf="api.getToken()" routerLink="/users">Users</a>
+      <a *ngIf="api.getToken()" routerLink="/coaches">Coaches</a>
+      <a *ngIf="api.getToken()" routerLink="/class">Courses</a>
+    </ul>
+    <button
+      class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-white font-bold rounded-xl transition duration-200"
+      *ngIf="api.getToken()" (click)="logout()">LogOut</button>
+  </nav>
+  <nav class="navbar-menu-phone relative z-50 hidden">
+    <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+    <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+      <a *ngIf="api.getToken()" routerLink="/home">Home</a>
+      <a *ngIf="api.getToken()" routerLink="/users">Users</a>
+      <a *ngIf="api.getToken()" routerLink="/coaches">Coaches</a>
+      <a *ngIf="api.getToken()" routerLink="/class">Courses</a>
+      <button
+        class="py-2 px-4 mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg transition duration-200"
+        (click)="logout()">Logout</button>
+      <button
+        class="py-2 px-4 mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg transition duration-200"
+        (click)="closeMenuAndNavigate('/your-page')">Cerrar Menú y Volver</button>
+    </nav>
+  </nav>
+
+
+
+
+
+  <!-- follow me on twitter @asad_codes
 
 <div class="flex flex-wrap place-items-center ">
     <section class="relative mx-auto">
-        <!-- navbar -->
-      <nav class="flex justify-between bg-gray-950 text-white w-screen">
+        navbar -->
+  <!-- <nav class="flex justify-between bg-gray-950 text-white w-screen">
         <div class="px-5 xl:px-12 py-6 flex w-full items-center">
           <a class="text-3xl font-bold font-heading flex" href="#"  >
-            <!-- <img class="h-9" src="https://res.cloudinary.com/dc3pogjef/image/upload/v1692321856/icons8-kettlebell-64_khm4ln.png" alt="logo"> -->
-            <p class="text-amber-400">UH</p><p>GYM</p>
-          </a>
-          <!-- Nav Links -->
-          <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
+             <img class="h-9" src="https://res.cloudinary.com/dc3pogjef/image/upload/v1692321856/icons8-kettlebell-64_khm4ln.png" alt="logo"> -->
+  <!-- <p class="text-amber-400">UH</p><p>GYM</p> -->
+  <!-- </a> -->
+  <!-- Nav Links -->
+  <!-- <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
             <li><a class="hover:text-gray-200" href="#">Home</a></li>
             <li><a class="hover:text-gray-200" href="#">Catagory</a></li>
             <li><a class="hover:text-gray-200" href="#">Collections</a></li>
             <li><a class="hover:text-gray-200" href="#">Contact Us</a></li>
-          </ul>
-          <!-- Header Icons -->
-          <div class="hidden xl:flex items-center space-x-5 items-center">
-            <!-- <a class="hover:text-gray-200" href="#">
+          </ul> -->
+  <!-- Header Icons -->
+  <!-- <div class="hidden xl:flex items-center space-x-5 items-center"> -->
+  <!-- <a class="hover:text-gray-200" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
               </svg>
             </a> -->
-            <!-- <a class="flex items-center hover:text-gray-200" href="#">
+  <!-- <a class="flex items-center hover:text-gray-200" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
@@ -41,17 +77,17 @@
                   </span>
                 </span>
             </a> -->
-            <!-- Sign In / Register      -->
-            <a class="flex items-center hover:text-gray-200" href="#">
+  <!-- Sign In / Register      -->
+  <!-- <a class="flex items-center hover:text-gray-200" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
             </a>
             
           </div>
-        </div>
-        <!-- Responsive navbar -->
-        <a class="xl:hidden flex mr-6 items-center" href="#">
+        </div> -->
+  <!-- Responsive navbar -->
+  <!-- <a class="xl:hidden flex mr-6 items-center" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
@@ -66,6 +102,4 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </a>
-      </nav>
-
-  
+      </nav> -->

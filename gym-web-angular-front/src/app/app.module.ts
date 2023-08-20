@@ -1,3 +1,4 @@
+
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,15 +12,15 @@ import { PrivateComponent } from './pages/private/private.component';
 import { NavbarComponent } from './shared/component/navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './shared/interceptors/auth.interceptor';
-
-import { CoachListComponent } from './page/coaches-list/coaches-list.component';
-import { CoachesDetailsComponent } from './page/coaches/coaches.component';
+import { CoachesComponent } from './pages/coaches/coaches.component';
 
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
 import { FooterComponent } from './shared/component/footer/footer.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { CoursesDetailComponent } from './pages/courses-detail/courses-detail.component';
+import { CoachesDetailComponent } from './pages/coaches-detail/coaches-detail.component';
+import { UsersComponent } from './pages/users/users.component';
 // register Swiper custom elements
 register();
 
@@ -32,11 +33,12 @@ register();
     RegisterComponent,
     PrivateComponent,
     NavbarComponent,
-    CoachListComponent,
-    CoachesDetailsComponent,
+    CoachesComponent,
+    CoachesDetailComponent,
     FooterComponent,
     CoursesComponent,
-    CoursesDetailComponent
+    CoursesDetailComponent,
+    UsersComponent
 
   ],
 

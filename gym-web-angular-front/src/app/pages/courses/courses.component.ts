@@ -14,7 +14,7 @@ export class CoursesComponent implements OnInit {
   ngOnInit(): void {
     this.api.getCourses().subscribe((data: any) =>{
       this.courses = [...data]
-      console.log(data);
+      // console.log(data);
       
     });
     
