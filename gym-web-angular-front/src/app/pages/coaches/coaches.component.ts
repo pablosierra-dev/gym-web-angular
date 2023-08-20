@@ -9,6 +9,8 @@ import { CoachI } from "src/app/models/coaches";
 })
 export class CoachesComponent implements OnInit {
   coaches: any[] = [];
+  courses: any[] = [];
+
   constructor(private coachApi: CoachesServices){}
     ngOnInit(): void {
       this.coachApi.allCoaches().subscribe((data: any) => {
@@ -16,6 +18,14 @@ export class CoachesComponent implements OnInit {
         // console.log(data);
         
         
-      })
+      });
+
+      this.coachApi.getCourses().subscribe((data: any) => {
+        this.courses = data;
+      });
+      
     }
+    
+
+    
   }

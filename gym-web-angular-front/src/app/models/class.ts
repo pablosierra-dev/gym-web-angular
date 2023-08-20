@@ -3,6 +3,9 @@ export interface ClassI {
     duration: string,
     class: number,
     type: string,
-    img: string
+    img: string,
+    description: string,
+    coach: string,
+    coachInfo: string
   }
   
