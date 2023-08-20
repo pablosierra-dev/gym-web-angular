@@ -46,5 +46,9 @@ export class CoachesServices {
     //localStorage.removeItem('choach');
     return throwError(error.error.message)
   }
+
+  getCoachDetail(coachId: string) {
+    return this.http.get<CoachI>(`${this.api_url}/class/${coachId}`);
+  }
 }
 
