@@ -48,7 +48,11 @@ export class CoachesServices {
   }
 
   getCoachDetail(coachId: string) {
-    return this.http.get<CoachI>(`${this.api_url}/class/${coachId}`);
+    return this.http.get<CoachI>(`${this.api_url}/coachs/${coachId}`);
+  }
+
+  getCourses(){
+    return this.http.get(`${this.api_url}/class/`)
   }
 }
 

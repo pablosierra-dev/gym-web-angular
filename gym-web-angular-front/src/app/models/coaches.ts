@@ -4,4 +4,5 @@ export interface CoachI {
   yearsOfExperiencie: number;
   courses: string[];
   img: string;
+  description: string; 
 }
