@@ -7,7 +7,7 @@ import { UserI } from 'src/app/models/interface';
   providedIn: 'root'
 })
 export class AuthService {
-  db_url: string = 'http://localhost:5000';
+  db_url: string = 'http://localhost:5002';
   constructor(private http: HttpClient) { }
 
   register(user: UserI){
@@ -33,8 +33,8 @@ export class AuthService {
   }
 
   handleError(error: HttpErrorResponse){
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    //localStorage.removeItem('token');
+    //localStorage.removeItem('user');
     return throwError(error.error.message)
   }
 }

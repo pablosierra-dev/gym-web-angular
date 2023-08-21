@@ -1,3 +1,4 @@
-<app-navbar></app-navbar>
-
+<app-navbar *ngIf="api.getToken()"></app-navbar>
 <router-outlet></router-outlet>
+
+<app-footer *ngIf="api.getToken()"></app-footer>

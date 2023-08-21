@@ -8,22 +8,22 @@ const usersArray = [
         age: 50,
         email: "Jose@diseñador.com",
         password: "Jose123",
-        courses: ["64c0f53c42bdfc4ee08a7948","64c0f53c42bdfc4ee08a7949"],
-        role: "admin"
+        courses: ["64df8cadb94ecb4dc11c4ba7","64df8cadb94ecb4dc11c4ba6"],
+        role: "coach"
     },
     {
         name: "Abel",
         age: 30,
         email: "Abel@huelva.com",
         password: "Abelino123",
-        courses: ["64c0f53c42bdfc4ee08a7948","64c0f53c42bdfc4ee08a794a"],
+        courses: ["64df8cadb94ecb4dc11c4ba6","64df8cadb94ecb4dc11c4ba7"],
         role: "user",
     },{
         name: "Dayana",
         age: 29,
         email: "Dayana@teacher.com",
         password: "Dayana123",
-        courses: ["64c0f53c42bdfc4ee08a7948","64c0f53c42bdfc4ee08a7949"],
+        courses: ["64df8cadb94ecb4dc11c4ba7","64df8cadb94ecb4dc11c4ba5"],
         role: "coach"
     },
   ];
